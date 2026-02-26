@@ -1,6 +1,0 @@
-{
-	"dependencies": {
-		"less": "^4.5.1",
-		"postcss": "^7.0.39"
-	}
-}

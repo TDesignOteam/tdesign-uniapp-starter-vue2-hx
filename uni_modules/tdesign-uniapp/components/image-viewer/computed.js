@@ -1,4 +1,0 @@
-export function shouldLoadImage(index, currentIndex, loadedIndexes) {
-  return Math.abs(index - currentIndex) <= 1 || (loadedIndexes && loadedIndexes.indexOf(index) !== -1);
-}
-

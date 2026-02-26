@@ -1,6 +1,0 @@
-export const getTreeClass = function (level, total) {
-  if (level === 0) return 'right';
-  if (level === 1 && level !== total - 1) return 'middle';
-  return 'left';
-};
-
