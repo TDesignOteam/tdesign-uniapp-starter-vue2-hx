@@ -72,6 +72,10 @@ npm install
 - [uni-app 官方文档](https://uniapp.dcloud.net.cn/)
 - [Vue 2 文档](https://v2.vuejs.org/)
 
+## 📱 扫码预览
+
+<img src="./docs/image/tdesign-uniapp-starter-vue2-hx-h5.png" width="300" />
+
 ## 📄 License
 
 [MIT](LICENSE)

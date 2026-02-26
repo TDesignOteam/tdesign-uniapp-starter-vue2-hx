@@ -5,8 +5,8 @@
   align-items: flex-start;
   justify-content: var(--td-form-item-justify-content, space-between);
   width: 100%;
-  padding: var(--td-form-item-horizontal-padding, 32rpx) var(--td-form-item-vertical-padding, 32rpx);
-  background-color: #ffffff;
+  padding: var(--td-form-item-vertical-padding, 32rpx) var(--td-form-item-horizontal-padding, 32rpx);
+  background-color: var(--td-form-bg-color, var(--td-bg-color-container, var(--td-font-white-1, #ffffff)));
   --td-input-vertical-padding: 0rpx;
   --td-textarea-vertical-padding: 0rpx;
   --td-textarea-horizontal-padding: 0rpx;
@@ -60,13 +60,6 @@
 .t-form-item__controls {
   flex: 1;
   width: 100%;
-  margin-top: 8rpx;
-}
-.t-form-item__controls--left {
-  text-align: left;
-}
-.t-form-item__controls--right {
-  text-align: right;
 }
 .t-form-item__controls-content {
   width: 100%;
@@ -74,10 +67,22 @@
   align-items: center;
   justify-content: space-between;
 }
+.t-form-item__controls-content--left {
+  justify-content: flex-start;
+}
+.t-form-item__controls-content--right {
+  justify-content: flex-end;
+}
 .t-form-item__help {
-  font-size: var(--td-font-size-m, 32rpx);
-  color: var(--td-font-gray-1, rgba(0, 0, 0, 0.9));
+  font-size: var(--td-font-size-s, 24rpx);
+  color: var(--td-text-color-disabled, var(--td-font-gray-4, rgba(0, 0, 0, 0.26)));
   line-height: 1.4;
+}
+.t-form-item__help--left {
+  text-align: left;
+}
+.t-form-item__help--right {
+  text-align: right;
 }
 .t-form-item__desc-link {
   margin-top: 8rpx;

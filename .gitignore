@@ -1,1 +1,15 @@
 node_modules/
+
+.DS_Store
+
+unpackage/dist/
+
+
+/components/
+/mixins/
+/pages/
+/pages-more/
+/style/
+
+uni_modules/tdesign-uniapp/
+uni_modules/tdesign-uniapp-chat/
