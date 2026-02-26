@@ -58,6 +58,7 @@
     "usingComponents": true
   },
   "h5": {
+    "template": "./index.html",
     "router": {
       "base": "./"
     }
