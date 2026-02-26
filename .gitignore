@@ -5,11 +5,11 @@ node_modules/
 unpackage/dist/
 
 
-/components/
-/mixins/
-/pages/
-/pages-more/
-/style/
+# /components/
+# /mixins/
+# /pages/
+# /pages-more/
+# /style/
 
-uni_modules/tdesign-uniapp/
-uni_modules/tdesign-uniapp-chat/
+# uni_modules/tdesign-uniapp/
+# uni_modules/tdesign-uniapp-chat/
