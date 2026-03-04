@@ -1,6 +1,17 @@
 const path = require('path');
 const postcss = require('postcss');
-// const webpack = require('webpack');
+
+// HBuilderX 编译时，UNI_CLI_CONTEXT 指向 plugins/uniapp-cli/ 目录
+// 通过它来 require HBuilderX 内置的三方 postcss 包，避免在项目中额外安装
+function requireFromCli(id) {
+  const cliContext = process.env.UNI_CLI_CONTEXT;
+  if (cliContext) {
+    try {
+      return require(require.resolve(id, { paths: [cliContext] }));
+    } catch (e) { /* fallback */ }
+  }
+  return require(id);
+}
 
 // 自定义 PostCSS 插件：将 Vue3 的 :deep() 转换为 Vue2 的 ::v-deep
 // 使用 PostCSS 7 兼容的插件格式
@@ -71,13 +82,35 @@ const rpxToPxPlugin = postcss.plugin('postcss-rpx-to-px', () => {
   };
 });
 
-const config = {
-  plugins: [
+// 导出函数形式，避免 postcss-load-config 的 Object.assign 覆盖
+module.exports = (ctx) => {
+  const plugins = [
+    requireFromCli('postcss-import')({
+      resolve(id, basedir, importOptions) {
+        if (id.startsWith('~@/')) {
+          return path.resolve(process.env.UNI_INPUT_DIR, id.substr(3));
+        } else if (id.startsWith('@/')) {
+          return path.resolve(process.env.UNI_INPUT_DIR, id.substr(2));
+        } else if (id.startsWith('/') && !id.startsWith('//')) {
+          return path.resolve(process.env.UNI_INPUT_DIR, id.substr(1));
+        }
+        return id;
+      },
+    }),
+    requireFromCli('autoprefixer')({
+      remove: process.env.UNI_PLATFORM !== 'h5',
+    }),
     deepSelectorPlugin(),
-    ...(process.env.UNI_PLATFORM === 'h5' ? [rpxToPxPlugin()] : []),
-  ],
+  ];
+
+  if (process.env.UNI_PLATFORM === 'h5') {
+    plugins.push(rpxToPxPlugin());
+  }
+
+  plugins.push(require('@dcloudio/vue-cli-plugin-uni/packages/postcss'));
+
+  return {
+    parser: requireFromCli('postcss-comment'),
+    plugins,
+  };
 };
-// if (webpack.version[0] > 4) {
-//   delete config.parser;
-// }
-module.exports = config;

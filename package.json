@@ -1,6 +1,12 @@
 {
 	"dependencies": {
+		"@dcloudio/uni-cli-i18n": "2.0.2-4080720251210002",
+		"@dcloudio/uni-cli-shared": "2.0.2-4080720251210002",
+		"@dcloudio/vue-cli-plugin-uni": "2.0.2-4080720251210002",
+		"autoprefixer": "^10.4.27",
 		"less": "^4.5.1",
-		"postcss": "^7.0.39"
+		"postcss": "^7.0.39",
+		"postcss-comment": "^2.0.0",
+		"postcss-import": "^12.0.1"
 	}
 }
