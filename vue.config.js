@@ -12,52 +12,9 @@ module.exports = {
   // 生产环境下设置 publicPath，用于 GitHub Pages 部署
   publicPath: process.env.NODE_ENV === 'production' ? GITHUB_PAGES_PATH : '/',
   transpileDependencies: ['tdesign-uniapp', 'tdesign-uniapp-chat'],
-  configureWebpack: {
-    resolve: {
-      alias: {
-        '@tdesign/uniapp': resolve('./uni_modules/tdesign-uniapp/components'),
-        '@tdesign/uniapp-chat': resolve('./uni_modules/tdesign-uniapp-chat/components'),
-      },
-    },
-  },
-  css: {
-    loaderOptions: {
-      less: {
-        lessOptions: {
-          plugins: [
-            {
-              install(lessInstance, pluginManager) {
-                // 定义别名映射
-                const aliasMap = {
-                  '@tdesign/uniapp/': resolve('./uni_modules/tdesign-uniapp/components/'),
-                  '@tdesign/uniapp-chat/': resolve('./uni_modules/tdesign-uniapp-chat/components/'),
-                };
-
-                // 自定义 FileManager，拦截 @import 中的别名路径
-                class AliasFileManager extends lessInstance.FileManager {
-                  supports(filename) {
-                    return Object.keys(aliasMap).some((prefix) => filename.startsWith(prefix));
-                  }
-                  supportsSync(filename) {
-                    return this.supports(filename);
-                  }
-                  loadFile(filename, currentDirectory, options, environment) {
-                    for (const [prefix, target] of Object.entries(aliasMap)) {
-                      if (filename.startsWith(prefix)) {
-                        const resolved = filename.replace(prefix, target + '/');
-                        return super.loadFile(resolved, currentDirectory, options, environment);
-                      }
-                    }
-                    return super.loadFile(filename, currentDirectory, options, environment);
-                  }
-                }
-
-                pluginManager.addFileManager(new AliasFileManager());
-              },
-            },
-          ],
-        },
-      },
-    },
+  chainWebpack: (config) => {
+    config.resolve.alias
+      .set('@tdesign/uniapp', resolve('./uni_modules/tdesign-uniapp/components'))
+      .set('@tdesign/uniapp-chat', resolve('./uni_modules/tdesign-uniapp-chat/components'));
   },
 };
