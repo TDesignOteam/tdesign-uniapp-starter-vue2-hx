@@ -2,8 +2,8 @@
   -webkit-transform: scaleY(-1);
   transform: scaleY(-1);
 }
-:deep(.t-attachments + t-chat-content:not(:empty)),
-:deep(.t-chat-thinking + t-chat-content:not(:empty)) {
+:deep(.t-attachments + .t-chat-content:not(:empty)),
+:deep(.t-chat-thinking + .t-chat-content:not(:empty)) {
   margin-top: 24rpx;
 }
 .t-chat-message {

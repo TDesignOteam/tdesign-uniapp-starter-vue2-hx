@@ -96,6 +96,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* #ifdef MP-QQ */
+  /* #endif */
 }
 .t-attachments__file.file .image image {
   width: 100%;
