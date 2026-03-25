@@ -81,7 +81,7 @@ export function isDate(input: string | Date, options?: IsDateOptions): boolean {
   const opts = { ...defaultOptions, ...options };
 
   if (typeof input === 'string') {
-    const delimiter = opts.delimiters.find((d) => opts.format.includes(d));
+    const delimiter = opts.delimiters.find(d => opts.format.includes(d));
     if (!delimiter) return false;
 
     const formatParts = opts.format.split(delimiter);
@@ -128,7 +128,7 @@ export function isDate(input: string | Date, options?: IsDateOptions): boolean {
  * 检查主机名是否匹配黑/白名单
  */
 function checkHost(host: string, list: Array<string | RegExp>): boolean {
-  if (!list || !list.length) return false;
+  if (!list?.length) return false;
   return list.some((item) => {
     if (item instanceof RegExp) return item.test(host);
     return host === item;
@@ -470,7 +470,7 @@ export function isURL(str: string, options?: IsURLOptions): boolean {
   }
 
   // 白名单优先
-  if (opts.host_whitelist && opts.host_whitelist.length) {
+  if (opts?.host_whitelist?.length) {
     return checkHost(host, opts.host_whitelist);
   }
 
@@ -488,7 +488,7 @@ export function isURL(str: string, options?: IsURLOptions): boolean {
   host = host || ipv6!;
 
   // 黑名单
-  if (opts.host_blacklist && opts.host_blacklist.length && checkHost(host, opts.host_blacklist)) {
+  if (opts?.host_blacklist?.length && checkHost(host, opts.host_blacklist)) {
     return false;
   }
 

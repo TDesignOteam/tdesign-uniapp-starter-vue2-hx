@@ -1,4 +1,8 @@
 {
+	"scripts": {
+		"init": "node scripts/replace-alias/index.js",
+		"watch": "node scripts/replace-alias/watch.js"
+	},
 	"dependencies": {
 		"@dcloudio/uni-cli-i18n": "2.0.2-4080720251210002",
 		"@dcloudio/uni-cli-shared": "2.0.2-4080720251210002",
@@ -8,5 +12,8 @@
 		"postcss": "^7.0.39",
 		"postcss-comment": "^2.0.0",
 		"postcss-import": "^12.0.1"
+	},
+	"devDependencies": {
+		"chokidar": "^3.6.0"
 	}
 }
