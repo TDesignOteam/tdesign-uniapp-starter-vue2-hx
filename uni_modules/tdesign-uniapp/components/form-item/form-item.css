@@ -49,6 +49,10 @@
   display: flex;
   flex-direction: column;
 }
+.t-form__item__icon {
+  font-size: 48rpx;
+  color: var(--td-text-color-placeholder, var(--td-font-gray-3, rgba(0, 0, 0, 0.4)));
+}
 .t-form--top {
   align-items: center;
 }

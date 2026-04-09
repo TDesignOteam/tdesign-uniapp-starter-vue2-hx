@@ -22,6 +22,7 @@
             :placement="item.role === 'user' ? 'right' : 'left'"
             :status="item.status || ''"
             @message-longpress="showPopover"
+            @click="onClick"
           >
             <template #actionbar>
               <t-chat-actionbar
@@ -71,7 +72,7 @@ import TChatList from '@tdesign/uniapp-chat/chat-list/chat-list.vue';
 import TChatSender from '@tdesign/uniapp-chat/chat-sender/chat-sender.vue';
 import TChatActionbar from '@tdesign/uniapp-chat/chat-actionbar/chat-actionbar.vue';
 import TToast from '@tdesign/uniapp/toast/toast.vue';
-import Toast from '@tdesign/uniapp/toast/index';
+import { Toast } from '@tdesign/uniapp';
 import { getNavigationBarHeight } from '../utils';
 
 let uniqueId = 0;
@@ -358,6 +359,11 @@ export default {
     handlePopoverAction(e) {
       e.chatId = this.activePopoverId;
       this.handleAction(e);
+    },
+
+    onClick(e) {
+      const { node } = e;
+      console.log('点击节点', node);
     },
   },
 };

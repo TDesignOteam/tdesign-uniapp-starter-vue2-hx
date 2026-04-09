@@ -60,6 +60,7 @@
   box-shadow: var(--td-shadow-1, 0 1px 10px rgba(0, 0, 0, 0.05), 0 4px 5px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.12));
   background-color: var(--td-bg-color-container, var(--td-font-white-1, #ffffff));
   transform: translateX(-50%);
+  z-index: 2;
 }
 .t-rate__tips--bottom {
   top: calc(100% + 16rpx);
