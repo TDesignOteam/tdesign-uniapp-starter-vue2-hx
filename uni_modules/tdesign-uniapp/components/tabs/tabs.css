@@ -106,7 +106,11 @@
 .t-tabs__item-suffix::after {
   border-bottom-left-radius: var(--td-radius-large, 18rpx);
 }
+.t-tabs__badge {
+  --td-badge-content-text-font: var(--td-tab-font, var(--td-font-body-medium, 28rpx / 44rpx var(--td-font-family, PingFang SC, Microsoft YaHei, Arial Regular)));
+}
 .t-tabs__badge--active {
+  --td-badge-content-text-font: var(--td-font-mark-medium, 600 28rpx / 44rpx var(--td-font-family, PingFang SC, Microsoft YaHei, Arial Regular));
   --td-badge-content-text-color: var(--td-tab-item-active-color, var(--td-brand-color, var(--td-primary-color-7, #0052d9)));
 }
 .t-tabs__badge--disabled {

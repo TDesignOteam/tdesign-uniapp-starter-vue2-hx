@@ -67,6 +67,11 @@
 :deep(.t-search__result-item--highLight) {
   color: var(--td-search-result-high-light-color, var(--td-brand-color, var(--td-primary-color-7, #0052d9)));
 }
+.t-search__result-list {
+  max-height: 560rpx;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
 .t-search__result-list :deep(.t-search__result-item) {
   padding-left: 0;
 }

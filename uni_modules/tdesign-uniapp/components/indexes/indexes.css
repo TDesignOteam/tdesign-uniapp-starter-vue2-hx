@@ -5,17 +5,22 @@
 .t-indexes__sidebar {
   position: fixed;
   right: var(--td-indexes-sidebar-right, 16rpx);
-  width: var(--td-indexes-sidebar-item-size, 40rpx);
   color: var(--td-indexes-sidebar-color, var(--td-text-color-primary, var(--td-font-gray-1, rgba(0, 0, 0, 0.9))));
   font: var(--td-indexes-sidebar-font, var(--td-font-body-small, 24rpx / 40rpx var(--td-font-family, PingFang SC, Microsoft YaHei, Arial Regular)));
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-flow: column nowrap;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
 }
 .t-indexes__sidebar-item {
-  border-radius: 50%;
+  min-width: var(--td-indexes-sidebar-item-size, 40rpx);
+  height: var(--td-indexes-sidebar-item-size, 40rpx);
+  padding: 0 calc(var(--td-spacer, 16rpx) / 2);
+  box-sizing: border-box;
+  border-radius: var(--td-indexes-sidebar-item-size, 40rpx);
   position: relative;
   text-align: center;
 }

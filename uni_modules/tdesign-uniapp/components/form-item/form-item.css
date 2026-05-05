@@ -73,13 +73,13 @@
 .t-form__label--right {
   text-align: right;
 }
-.t-form__label--required:not(.t-form__label--required-right) label::before {
+.t-form__label--required:not(.t-form__label--required-right) .t-form__label-text::before {
   display: inline;
   margin-right: calc(var(--td-spacer, 16rpx) / 2);
   color: var(--td-error-color-6, #d54941);
   content: '*';
 }
-.t-form__label--required-right label::after {
+.t-form__label--required-right .t-form__label-text::after {
   display: inline;
   margin-left: calc(var(--td-spacer, 16rpx) / 2);
   color: var(--td-error-color-6, #d54941);
