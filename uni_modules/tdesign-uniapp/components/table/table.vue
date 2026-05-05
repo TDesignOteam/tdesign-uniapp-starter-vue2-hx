@@ -77,12 +77,10 @@
             @click="onRowClick(rowItem.rowIndex)"
           >
             <!-- #ifdef VUE2 -->
-            <template
-              v-for="(cell, tdIndex) in rowItem.cells"
-            >
+            <!-- eslint-disable-next-line vue/no-unused-vars -->
+            <template v-for="(cell, tdIndex) in rowItem.cells">
               <!-- #endif -->
               <!-- #ifdef VUE3 -->
-
               <template
                 v-for="(cell, tdIndex) in rowItem.cells"
                 :key="cell.colKey"
@@ -107,11 +105,10 @@
                 </view>
               <!-- #ifdef VUE3 -->
               </template>
-
             <!-- #endif -->
-            </template>
-            <!-- #ifdef VUE2 -->
 
+            <!-- #ifdef VUE2 -->
+            </template>
             <!-- #endif -->
           </view>
         </view>
