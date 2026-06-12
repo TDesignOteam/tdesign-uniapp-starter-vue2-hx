@@ -45,7 +45,7 @@ import TNavbar from '@tdesign/uniapp/navbar/navbar.vue';
 
 #### 高度说明
 
-`navbar` 组件可由 `--td-navbar-height` 控制。在 H5 或 APP-PLUS 平台下，`--td-navbar-height` 变量需要业务自己设置，小程序平台则会根据 `statusBarHeight` 等变量计算得到。
+`navbar` 组件可由 `--td-navbar-height` 控制。在 H5 或 APP 平台下，`--td-navbar-height` 变量需要业务自己设置，小程序平台则会根据 `statusBarHeight` 等变量计算得到。
 
 ## API
 
@@ -104,7 +104,7 @@ t-class-title | 标题样式类
 ### CSS Variables
 
 组件提供了下列 CSS 变量，可用于自定义样式。
-名称 | 默认值 | 描述 
+名称 | 默认值 | 描述
 -- | -- | --
 --td-navbar-padding-top | 20px | -
 --td-navbar-right | 95px | -

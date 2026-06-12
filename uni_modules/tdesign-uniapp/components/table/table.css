@@ -50,14 +50,14 @@
   border-bottom: 1px solid var(--td-table-border-color, var(--td-component-border, var(--td-gray-color-4, #dcdcdc)));
 }
 .t-table__th {
-  padding: var(--td-table-th-padding, 8px 12px);
+  padding: var(--td-table-th-padding, 16rpx 24rpx);
   background-color: var(--td-table-header-bg-color, var(--td-bg-color-container, var(--td-font-white-1, #ffffff)));
   color: var(--td-table-header-text-color, var(--td-text-color-placeholder, var(--td-font-gray-3, rgba(0, 0, 0, 0.4))));
   font-weight: normal;
   text-align: left;
 }
 .t-table__td {
-  padding: var(--td-table-td-padding, 8px 12px);
+  padding: var(--td-table-td-padding, 16rpx 24rpx);
   text-align: left;
 }
 .t-table__th-content,

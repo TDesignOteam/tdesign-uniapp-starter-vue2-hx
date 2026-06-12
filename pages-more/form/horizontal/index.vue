@@ -9,6 +9,7 @@
       show-error-message
       scroll-to-first-error="smooth"
       label-align="left"
+      content-align="right"
       @reset="(e) => onReset(e, { tagId: 'form' })"
       @submit="(e) => onSubmit(e, { tagId: 'form' })"
     >
@@ -16,6 +17,7 @@
         label="用户名"
         name="name"
         help="输入用户名"
+        content-align="left"
       >
         <t-input
           :value="formData.name"
@@ -217,19 +219,19 @@
 </template>
 
 <script>
+import TButton from '@tdesign/uniapp/button/button.vue';
+import TCascader from '@tdesign/uniapp/cascader/cascader.vue';
+import { canUseVirtualHost } from '@tdesign/uniapp/common/version';
 import TForm from '@tdesign/uniapp/form/form.vue';
 import TFormItem from '@tdesign/uniapp/form-item/form-item.vue';
 import TInput from '@tdesign/uniapp/input/input.vue';
-import TRadioGroup from '@tdesign/uniapp/radio-group/radio-group.vue';
 import TRadio from '@tdesign/uniapp/radio/radio.vue';
+import TRadioGroup from '@tdesign/uniapp/radio-group/radio-group.vue';
 // import TPopup from '@tdesign/uniapp/popup/popup.vue';
-import TCascader from '@tdesign/uniapp/cascader/cascader.vue';
-import TStepper from '@tdesign/uniapp/stepper/stepper.vue';
 import TRate from '@tdesign/uniapp/rate/rate.vue';
+import TStepper from '@tdesign/uniapp/stepper/stepper.vue';
 import TTextarea from '@tdesign/uniapp/textarea/textarea.vue';
 import TUpload from '@tdesign/uniapp/upload/upload.vue';
-import TButton from '@tdesign/uniapp/button/button.vue';
-import { canUseVirtualHost } from '@tdesign/uniapp/common/version';
 
 export default {
   options: {

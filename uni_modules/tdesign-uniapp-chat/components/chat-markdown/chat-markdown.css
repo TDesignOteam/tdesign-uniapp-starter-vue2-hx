@@ -91,10 +91,24 @@
   background-color: var(--td-bg-color-page, var(--td-gray-color-1, #f3f3f3));
   border: 1rpx solid var(--td-component-border, var(--td-gray-color-4, #dcdcdc));
 }
+.t-chat-markdown-tail {
+  display: inline-block;
+  color: #d9d9d9;
+  margin-left: 8rpx;
+  transform: scaleX(0.25);
+  transform-origin: left center;
+}
+.t-chat-markdown .t-chat-markdown-table {
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
 .t-chat-markdown .t-chat-markdown-table__container {
   display: table;
-  width: 100%;
+  min-width: 100%;
+  max-width: max-content;
   border-collapse: collapse;
+  white-space: nowrap;
 }
 .t-chat-markdown .t-chat-markdown-table__container-thead {
   display: table-header-group;

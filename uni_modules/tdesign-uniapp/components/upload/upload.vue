@@ -49,14 +49,14 @@
               :autoplay="false"
               objectFit="contain"
               :data-file="file"
-              @click.stop="onFileClick"
+              @click.stop="(e) => onFileClick(e, {file, index})"
             />
             <view
               v-if="file.status && file.status != 'done'"
               :class="classPrefix + '__progress-mask'"
               :data-index="index"
               :data-file="file"
-              @click.stop="onFileClick"
+              @click.stop="(e) => onFileClick(e, {file, index})"
             >
               <block v-if="file.status == 'loading'">
                 <t-icon
@@ -88,7 +88,7 @@
               :data-index="index"
               aria-role="button"
               aria-label="删除"
-              @click.stop="onDelete"
+              @click.stop="(e) => onDelete(e, {index})"
             >
               <t-icon
                 name="close"
@@ -177,14 +177,14 @@
                   :autoplay="false"
                   objectFit="contain"
                   :data-file="file"
-                  @click.stop="onFileClick"
+                  @click.stop="(e) => onFileClick(e, {file, index})"
                 />
                 <view
                   v-if="file.status && file.status != 'done'"
                   :class="classPrefix + '__progress-mask'"
                   :data-index="index"
                   :data-file="file"
-                  @click.stop="onFileClick"
+                  @click.stop="(e) => onFileClick(e, {file, index})"
                 >
                   <block v-if="file.status == 'loading'">
                     <t-icon
@@ -217,7 +217,7 @@
                   :data-url="file.url"
                   aria-role="button"
                   aria-label="删除"
-                  @click.stop="onDelete"
+                  @click.stop="(e) => onDelete(e, {index})"
                 >
                   <t-icon
                     name="close"
@@ -264,20 +264,19 @@
   </view>
 </template>
 <script>
+import { prefix } from '../common/config';
+import { parseEventDynamicCode } from '../common/event/dynamic';
+import { uniComponent } from '../common/src/index';
+import { isOverSize, coalesce, isWxWork, isPC } from '../common/utils';
+import tools from '../common/utils.wxs';
+import { isObject } from '../common/validator';
 import TGrid from '../grid/grid';
 import TGridItem from '../grid-item/grid-item';
 import TIcon from '../icon/icon';
 import TImage from '../image/image';
-import { uniComponent } from '../common/src/index';
-import props from './props';
-import { prefix } from '../common/config';
-import { isOverSize, coalesce, isWxWork, isPC } from '../common/utils';
-import { isObject } from '../common/validator';
-import tools from '../common/utils.wxs';
-import {
-  getWrapperAriaRole,
-  getWrapperAriaLabel,
-} from './upload.computed.js';
+
+import usingConfig from '../mixins/using-config';
+
 import {
   longPress,
   touchMove,
@@ -285,10 +284,15 @@ import {
   baseDataObserver,
   listObserver,
 } from './drag.computed.js';
-import { parseEventDynamicCode } from '../common/event/dynamic';
+import props from './props';
 
 
-import usingConfig from '../mixins/using-config';
+import {
+  getWrapperAriaRole,
+  getWrapperAriaLabel,
+} from './upload.computed.js';
+
+
 const componentName = 'upload';
 const name = `${prefix}-${componentName}`;
 
@@ -424,8 +428,7 @@ export default {
         this.$emit('fail', err);
       },
 
-      onFileClick(e) {
-        const { file, index } = e.currentTarget.dataset;
+      onFileClick(e, { file, index }) {
         this.$emit('click', { index, file });
       },
 
@@ -473,8 +476,7 @@ export default {
         return false;
       },
 
-      onDelete(e) {
-        const { index } = e.currentTarget.dataset;
+      onDelete(e, { index }) {
         this.deleteHandle(index);
       },
 
@@ -545,7 +547,7 @@ export default {
         const { classPrefix, rows, column } = this;
 
         let query;
-        // #ifdef H5 || APP-PLUS
+        // #ifdef H5 || APP
         query = uni.createSelectorQuery().in(this);
         // #endif
         if (!query) {
@@ -555,7 +557,7 @@ export default {
 
         let selectorGridItem;
         let selectorGrid;
-        // #ifdef H5 || APP-PLUS
+        // #ifdef H5 || APP
         selectorGridItem = '.t-grid-item';
         selectorGrid = '.t-grid';
         // #endif
@@ -608,22 +610,21 @@ export default {
         return previewMediaSources;
       },
 
-      onPreview(e) {
-        this.onFileClick(e);
+      onPreview(e, { file, index }) {
+        this.onFileClick(e, { file, index });
         const { preview } = this;
 
         if (!preview) return;
 
         const usePreviewMedia = this.customFiles.some(file => file.type === 'video');
         if (usePreviewMedia) {
-          this.onPreviewMedia(e);
+          this.onPreviewMedia({ index });
         } else {
-          this.onPreviewImage(e);
+          this.onPreviewImage({ index });
         }
       },
 
-      onPreviewImage(e) {
-        const { index } = e.currentTarget.dataset;
+      onPreviewImage({ index }) {
         const urls = this.customFiles.filter(file => file.percent !== -1).map(file => file.url);
         const current = this.customFiles[index]?.url;
         uni.previewImage({
@@ -635,8 +636,7 @@ export default {
         });
       },
 
-      onPreviewMedia(e) {
-        const { index: current } = e.currentTarget.dataset;
+      onPreviewMedia({ index: current }) {
         const sources = this.getPreviewMediaSources();
         uni.previewMedia({
           sources,

@@ -26,7 +26,7 @@
               :class="classPrefix + '__cancel ' + tClassCancel"
               @click="onCancel"
             >
-              {{ globalConfig.cancel }}
+              {{ cancelBtn === true ? globalConfig.cancel : cancelBtn }}
             </view>
             <view :class="classPrefix + '__title ' + tClassTitle">
               {{ title }}
@@ -36,7 +36,7 @@
               :class="classPrefix + '__confirm ' + tClassConfirm"
               @click="onConfirm"
             >
-              {{ globalConfig.confirm }}
+              {{ confirmBtn === true ? globalConfig.confirm : confirmBtn }}
             </view>
           </view>
           <slot name="header" />
@@ -72,7 +72,7 @@
             :class="classPrefix + '__cancel ' + tClassCancel"
             @click="onCancel"
           >
-            {{ globalConfig.cancel }}
+            {{ cancelBtn === true ? globalConfig.cancel : cancelBtn }}
           </view>
           <view :class="classPrefix + '__title ' + tClassTitle">
             {{ title }}
@@ -82,7 +82,7 @@
             :class="classPrefix + '__confirm ' + tClassConfirm"
             @click="onConfirm"
           >
-            {{ globalConfig.confirm }}
+            {{ confirmBtn === true ? globalConfig.confirm : confirmBtn }}
           </view>
         </view>
         <slot name="header" />
@@ -105,16 +105,18 @@
   </view>
 </template>
 <script>
-import TPopup from '../popup/popup';
+import { prefix } from '../common/config';
+
+import { ParentMixin, RELATION_MAP } from '../common/relation';
 import { uniComponent } from '../common/src/index';
 import { coalesce } from '../common/utils';
-import { prefix } from '../common/config';
-import props from './props';
-import useCustomNavbar from '../mixins/using-custom-navbar';
 import tools from '../common/utils.wxs';
-import { ParentMixin, RELATION_MAP } from '../common/relation';
 
 import usingConfig from '../mixins/using-config';
+import useCustomNavbar from '../mixins/using-custom-navbar';
+import TPopup from '../popup/popup';
+
+import props from './props';
 const componentName = 'picker';
 const name = `${prefix}-${componentName}`;
 

@@ -102,14 +102,17 @@
   </view>
 </template>
 <script>
-import TIcon from '../icon/icon';
 import TCell from '../cell/cell';
-import { uniComponent } from '../common/src/index';
 import { prefix } from '../common/config';
-import props from './props';
+import { uniComponent } from '../common/src/index';
+
+
 import { getCharacterLength, nextTick } from '../common/utils';
 import tools from '../common/utils.wxs';
+import TIcon from '../icon/icon';
+
 import { highLight } from './computed.js';
+import props from './props';
 // import { getInnerMaxLen } from '../input/utils';
 
 const name = `${prefix}-search`;
@@ -197,7 +200,10 @@ export default {
 
         this.showClearIcon = value || String(clearTrigger) === 'always';
       },
-
+      emitChange(data) {
+        this.$emit('update:value', data.value);
+        this.$emit('change', data);
+      },
       onInput(e) {
         let { value } = e.detail;
         // this.rawValue = value;
@@ -213,7 +219,7 @@ export default {
 
         nextTick().then(() => {
           this.dataValue = value;
-          this.$emit('change', {
+          this.emitChange({
             value,
             trigger: 'input-change',
           });
@@ -237,11 +243,11 @@ export default {
       handleClear() {
         this.dataValue = '';
         this.isSearching = false;
-        this.$emit('clear', { value: '' });
-        this.$emit('change', {
+        this.emitChange({
           value: '',
           trigger: 'clear',
         });
+        this.$emit('clear', { value: '' });
       },
 
       onConfirm(e) {
@@ -258,8 +264,7 @@ export default {
         const item = this.resultList[index];
         this.dataValue = item;
         this.isSelected = true;
-
-        this.$emit('change', {
+        this.emitChange({
           value: item,
           trigger: 'option-click',
         });
