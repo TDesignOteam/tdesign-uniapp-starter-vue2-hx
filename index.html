@@ -7,20 +7,22 @@
 try {
   setTimeout(() => {   
     
-console.info('[system]', '');
-console.info('[system]', 'Build Time: 2026-06-17 17:36:07');
-console.info('[system]', 'Build Author: ');
-console.info('[system]', 'Build Branch: ');
-console.info('[system]', 'Build Net Env: ');
-
+window._vConsoleBuildInfo = {
+  time: '2026-06-17 17:57:55',
+  author: '',
+  branch: '',
+  netEnv: '',
+}
     
-console.info('[system]', '');
-console.info('[system]', 'Last Commit Message: UNKNOWN');
-console.info('[system]', 'Last Commit Author: UNKNOWN');
-console.info('[system]', 'Last Commit Time: 1970-01-01 08:00:00');
-console.info('[system]', 'Last Commit Hash: UNKNOWN');
-  
-  }, 10);
+    
+window._vConsoleCommitInfo = {
+  message: 'UNKNOWN',
+  author: 'UNKNOWN',
+  date: '1970-01-01 08:00:00',
+  hash: 'UNKNOWN',
+}
+    
+  }, 0);
 } catch(err) {}
 </script>
 </body></html>
