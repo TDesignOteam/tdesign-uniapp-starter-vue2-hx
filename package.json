@@ -11,9 +11,11 @@
 		"less": "^4.5.1",
 		"postcss": "^7.0.39",
 		"postcss-comment": "^2.0.0",
-		"postcss-import": "^12.0.1"
+		"postcss-import": "^12.0.1",
+		"t-comm": "^3.3.0"
 	},
 	"devDependencies": {
+		"@plugin-light/webpack-plugin-gen-version": "^1.0.0",
 		"chokidar": "^3.6.0"
 	}
 }
