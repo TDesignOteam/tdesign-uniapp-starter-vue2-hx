@@ -3,6 +3,7 @@ const {
   GenVersionWebPlugin,
   GenVersionMpPlugin,
 } = require('@plugin-light/webpack-plugin-gen-version');
+const { BUILD_NAME_MAP } = require('t-comm/lib/v-console/config');
 
 function resolve(dir) {
   return path.join(__dirname, dir);
@@ -17,7 +18,11 @@ const plugins = []
 if (process.env.VUE_APP_PLATFORM !== 'h5') {
   plugins.push(new GenVersionMpPlugin());
 } else {
-  plugins.push(new GenVersionWebPlugin());
+  plugins.push(new GenVersionWebPlugin({
+    buildName: BUILD_NAME_MAP.build,
+    commitName: BUILD_NAME_MAP.commit,
+    delay: 0,
+  }));
 }
 
 module.exports = {
