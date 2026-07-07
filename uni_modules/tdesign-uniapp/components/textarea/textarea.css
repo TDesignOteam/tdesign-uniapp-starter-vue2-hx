@@ -35,6 +35,7 @@
   resize: none;
   font: var(--td-font-body-large, 32rpx / 48rpx var(--td-font-family, PingFang SC, Microsoft YaHei, Arial Regular));
   color: var(--td-textarea-text-color, var(--td-text-color-primary, var(--td-font-gray-1, rgba(0, 0, 0, 0.9))));
+  overflow-y: auto;
 }
 .t-textarea__placeholder {
   color: var(--td-textarea-placeholder-color, var(--td-text-color-placeholder, var(--td-font-gray-3, rgba(0, 0, 0, 0.4))));
