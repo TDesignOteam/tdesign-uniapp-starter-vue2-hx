@@ -67,6 +67,23 @@
   position: relative;
   z-index: 2;
 }
+.t-chat-sender__mode {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+}
+.t-chat-sender__speech-toggle {
+  width: 58rpx;
+  height: 58rpx;
+  border-radius: 999rpx;
+  border: 2rpx solid var(--td-component-border, var(--td-gray-color-4, #dcdcdc));
+  background-color: var(--td-bg-color-container, var(--td-font-white-1, #ffffff));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--td-text-color-primary, var(--td-font-gray-1, rgba(0, 0, 0, 0.9)));
+}
 .t-chat-sender__upload {
   display: flex;
   margin-top: -40rpx;

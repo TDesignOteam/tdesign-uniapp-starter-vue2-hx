@@ -39,9 +39,12 @@
   align-items: center;
   box-sizing: content-box;
 }
-.t-navbar__left {
+.t-navbar__left,
+.t-navbar__right {
   position: relative;
   box-sizing: border-box;
+}
+.t-navbar__left {
   max-width: var(--td-navbar-left-max-width);
   overflow: hidden;
   display: flex;
@@ -54,6 +57,16 @@
 }
 .t-navbar__left--hide {
   opacity: 0;
+}
+.t-navbar__right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  margin-right: var(--td-spacer-1, 24rpx);
+  transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .t-navbar__capsule {
   box-sizing: border-box;
