@@ -65,12 +65,12 @@
 }
 .t-stepper__minus--outline,
 .t-stepper__plus--outline {
-  border: 2rpx solid var(--td-stepper-border-color, var(--td-component-border, var(--td-gray-color-4, #dcdcdc)));
+  border: 2rpx solid var(--td-stepper-border-color, var(--td-component-border, var(--td-gray-color-4, #dddddd)));
 }
 .t-stepper__input--outline {
   border: none;
-  border-top: 2rpx solid var(--td-stepper-border-color, var(--td-component-border, var(--td-gray-color-4, #dcdcdc)));
-  border-bottom: 2rpx solid var(--td-stepper-border-color, var(--td-component-border, var(--td-gray-color-4, #dcdcdc)));
+  border-top: 2rpx solid var(--td-stepper-border-color, var(--td-component-border, var(--td-gray-color-4, #dddddd)));
+  border-bottom: 2rpx solid var(--td-stepper-border-color, var(--td-component-border, var(--td-gray-color-4, #dddddd)));
 }
 .t-stepper__minus--outline,
 .t-stepper__minus--filled {

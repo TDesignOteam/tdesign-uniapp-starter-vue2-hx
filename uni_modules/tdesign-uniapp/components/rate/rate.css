@@ -22,12 +22,12 @@
 }
 :deep(.t-rate__icon)--selected-half {
   color: transparent;
-  background: linear-gradient(to right, var(--td-rate-selected-color, var(--td-warning-color, var(--td-warning-color-5, #e37318))) 0%, var(--td-rate-selected-color, var(--td-warning-color, var(--td-warning-color-5, #e37318))) 50%, var(--td-rate-unselected-color, var(--td-component-border, var(--td-gray-color-4, #dcdcdc))) 51%, var(--td-rate-unselected-color, var(--td-component-border, var(--td-gray-color-4, #dcdcdc))) 100%);
+  background: linear-gradient(to right, var(--td-rate-selected-color, var(--td-warning-color, var(--td-warning-color-5, #e37318))) 0%, var(--td-rate-selected-color, var(--td-warning-color, var(--td-warning-color-5, #e37318))) 50%, var(--td-rate-unselected-color, var(--td-component-border, var(--td-gray-color-4, #dddddd))) 51%, var(--td-rate-unselected-color, var(--td-component-border, var(--td-gray-color-4, #dddddd))) 100%);
   -webkit-background-clip: text;
   background-clip: text;
 }
 :deep(.t-rate__icon)--unselected {
-  color: var(--td-rate-unselected-color, var(--td-component-border, var(--td-gray-color-4, #dcdcdc)));
+  color: var(--td-rate-unselected-color, var(--td-component-border, var(--td-gray-color-4, #dddddd)));
 }
 .t-rate__text {
   font-size: var(--td-rate-text-font-size, var(--td-font-size-m, 32rpx));
@@ -74,7 +74,7 @@
   border-radius: 6rpx;
 }
 .t-rate__tips-item--active {
-  background-color: var(--td-bg-color-component, var(--td-gray-color-3, #e7e7e7));
+  background-color: var(--td-bg-color-component, var(--td-gray-color-3, #e8e8e8));
 }
 .t-rate__tips-text {
   text-align: center;

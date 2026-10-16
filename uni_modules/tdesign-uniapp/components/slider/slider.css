@@ -36,7 +36,7 @@
 }
 .t-slider__dot {
   border-radius: 50%;
-  border: 2rpx solid var(--td-slider-dot-color, var(--td-component-border, var(--td-gray-color-4, #dcdcdc)));
+  border: 2rpx solid var(--td-slider-dot-color, var(--td-component-border, var(--td-gray-color-4, #dddddd)));
   position: absolute;
   top: 50%;
   right: 0;
@@ -99,17 +99,17 @@
   height: var(--td-slider-bar-height, 8rpx);
   border-radius: calc(var(--td-slider-bar-height, 8rpx) / 2);
   position: relative;
-  background-color: var(--td-slider-default-color, var(--td-bg-color-component, var(--td-gray-color-3, #e7e7e7)));
+  background-color: var(--td-slider-default-color, var(--td-bg-color-component, var(--td-gray-color-3, #e8e8e8)));
 }
 .t-slider__bar--capsule {
   height: var(--td-slider-capsule-bar-heihgt, 48rpx);
   border-radius: calc(var(--td-slider-capsule-bar-heihgt, 48rpx) / 2);
-  background-color: var(--td-slider-capsule-bar-color, var(--td-bg-color-component, var(--td-gray-color-3, #e7e7e7)));
-  border: 6rpx solid var(--td-slider-capsule-bar-color, var(--td-bg-color-component, var(--td-gray-color-3, #e7e7e7)));
+  background-color: var(--td-slider-capsule-bar-color, var(--td-bg-color-component, var(--td-gray-color-3, #e8e8e8)));
+  border: 6rpx solid var(--td-slider-capsule-bar-color, var(--td-bg-color-component, var(--td-gray-color-3, #e8e8e8)));
   box-sizing: border-box;
 }
 .t-slider__bar--marks {
-  background-color: var(--td-slider-default-color, var(--td-bg-color-component, var(--td-gray-color-3, #e7e7e7)));
+  background-color: var(--td-slider-default-color, var(--td-bg-color-component, var(--td-gray-color-3, #e8e8e8)));
 }
 .t-slider__bar--disabled {
   background-color: var(--td-slider-default-color, var(--td-bg-color-component-disabled, var(--td-gray-color-2, #eeeeee)));
@@ -123,7 +123,7 @@
   text-align: right;
 }
 .t-slider__scale-item {
-  background-color: var(--td-slider-default-color, var(--td-bg-color-component, var(--td-gray-color-3, #e7e7e7)));
+  background-color: var(--td-slider-default-color, var(--td-bg-color-component, var(--td-gray-color-3, #e8e8e8)));
   width: var(--td-slider-bar-height, 8rpx);
   height: 16rpx;
   width: 16rpx;
@@ -146,7 +146,7 @@
   height: var(--td-slider-capsule-line-heihgt, 36rpx);
   width: 4rpx;
   border-radius: 0;
-  background-color: var(--td-slider-capsule-bar-color, var(--td-bg-color-component, var(--td-gray-color-3, #e7e7e7)));
+  background-color: var(--td-slider-capsule-bar-color, var(--td-bg-color-component, var(--td-gray-color-3, #e8e8e8)));
   margin-top: calc(-0.5 * var(--td-slider-capsule-line-heihgt, 36rpx));
 }
 .t-slider__scale-item--hidden {

@@ -25,7 +25,7 @@
   padding: 0 0.75em;
   color: var(--td-text-color-primary, var(--td-font-gray-1, rgba(0, 0, 0, 0.9)));
   background-color: var(--td-bg-color-secondarycontainer, var(--td-gray-color-1, #f3f3f3));
-  border-left: 4rpx solid var(--td-component-border, var(--td-gray-color-4, #dcdcdc));
+  border-left: 4rpx solid var(--td-component-border, var(--td-gray-color-4, #dddddd));
   margin-bottom: var(--td-spacer-1, 24rpx);
 }
 .t-chat-markdown-h {
@@ -61,7 +61,7 @@
   height: 6rpx;
   padding: 0;
   margin: var(--td-spacer-1, 24rpx) 0;
-  background-color: var(--td-component-border, var(--td-gray-color-4, #dcdcdc));
+  background-color: var(--td-component-border, var(--td-gray-color-4, #dddddd));
   border: 0;
 }
 .t-chat-markdown-list {
@@ -89,7 +89,7 @@
   font-size: 0.8em;
   overflow-x: auto;
   background-color: var(--td-bg-color-page, var(--td-gray-color-1, #f3f3f3));
-  border: 1rpx solid var(--td-component-border, var(--td-gray-color-4, #dcdcdc));
+  border: 1rpx solid var(--td-component-border, var(--td-gray-color-4, #dddddd));
 }
 .t-chat-markdown-tail {
   display: inline-block;
@@ -122,14 +122,14 @@
 .t-chat-markdown .t-chat-markdown-table__container-th {
   display: table-cell;
   vertical-align: middle;
-  background-color: var(--td-bg-color-component, var(--td-gray-color-3, #e7e7e7));
+  background-color: var(--td-bg-color-component, var(--td-gray-color-3, #e8e8e8));
   font-weight: bold;
   padding: 5rpx 10rpx;
-  border: 1rpx solid var(--td-component-border, var(--td-gray-color-4, #dcdcdc));
+  border: 1rpx solid var(--td-component-border, var(--td-gray-color-4, #dddddd));
 }
 .t-chat-markdown .t-chat-markdown-table__container-td {
   display: table-cell;
   vertical-align: middle;
   padding: 5rpx 10rpx;
-  border: 1rpx solid var(--td-component-border, var(--td-gray-color-4, #dcdcdc));
+  border: 1rpx solid var(--td-component-border, var(--td-gray-color-4, #dddddd));
 }

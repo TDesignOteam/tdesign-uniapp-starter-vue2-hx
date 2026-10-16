@@ -14,7 +14,7 @@
   justify-content: center;
   flex-wrap: nowrap;
   font-size: var(--td-switch-label-font-size, 28rpx);
-  color: var(--td-switch-label-color, var(--td-bg-color-secondarycontainer-active, var(--td-gray-color-4, #dcdcdc)));
+  color: var(--td-switch-label-color, var(--td-bg-color-secondarycontainer-active, var(--td-gray-color-4, #dddddd)));
   overflow: hidden;
 }
 .t-switch__label--checked {
@@ -52,7 +52,7 @@
   width: var(--td-switch-width, 90rpx);
   height: var(--td-switch-height, 56rpx);
   border-radius: var(--td-switch-radius, calc(var(--td-switch-height, 56rpx) / 2));
-  background-color: var(--td-switch-unchecked-color, var(--td-bg-color-secondarycontainer-active, var(--td-gray-color-4, #dcdcdc)));
+  background-color: var(--td-switch-unchecked-color, var(--td-bg-color-secondarycontainer-active, var(--td-gray-color-4, #dddddd)));
   position: relative;
   transition: all 0.3s ease;
   overflow: hidden;

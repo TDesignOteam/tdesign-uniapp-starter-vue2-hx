@@ -25,7 +25,7 @@
   width: var(--td-radio-icon-size, 48rpx);
   height: var(--td-radio-icon-size, 48rpx);
   font-size: var(--td-radio-icon-size, 48rpx);
-  color: var(--td-radio-icon-color, var(--td-component-border, var(--td-gray-color-4, #dcdcdc)));
+  color: var(--td-radio-icon-color, var(--td-component-border, var(--td-gray-color-4, #dddddd)));
   overflow: hidden;
 }
 .t-radio__icon:empty {
@@ -51,7 +51,7 @@
   width: calc(200% - 6rpx);
   height: calc(200% - 6rpx);
   border-radius: 50%;
-  border: 3px solid var(--td-radio-icon-color, var(--td-component-border, var(--td-gray-color-4, #dcdcdc)));
+  border: 3px solid var(--td-radio-icon-color, var(--td-component-border, var(--td-gray-color-4, #dddddd)));
   position: absolute;
   top: 50%;
   left: 50%;
@@ -167,7 +167,7 @@
   position: absolute;
   bottom: 0;
   height: 1px;
-  background: var(--td-radio-border-color, var(--td-component-stroke, var(--td-gray-color-3, #e7e7e7)));
+  background: var(--td-radio-border-color, var(--td-component-stroke, var(--td-gray-color-3, #e8e8e8)));
   left: 96rpx;
   right: 0;
   transform: scaleY(0.5);

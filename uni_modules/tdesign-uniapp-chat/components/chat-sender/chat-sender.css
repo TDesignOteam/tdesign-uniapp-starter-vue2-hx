@@ -2,7 +2,7 @@
   position: relative;
   border-radius: 32rpx;
   padding: 22rpx 0;
-  border: 2rpx solid var(--td-component-border, var(--td-gray-color-4, #dcdcdc));
+  border: 2rpx solid var(--td-component-border, var(--td-gray-color-4, #dddddd));
   box-sizing: border-box;
   margin: 24rpx 24rpx 80rpx 24rpx;
   box-shadow: var(--td-shadow-3, 0 6px 30px 5px rgba(0, 0, 0, 0.05), 0 16px 24px 2px rgba(0, 0, 0, 0.04), 0 8px 10px -5px rgba(0, 0, 0, 0.08));
@@ -76,7 +76,7 @@
   width: 58rpx;
   height: 58rpx;
   border-radius: 999rpx;
-  border: 2rpx solid var(--td-component-border, var(--td-gray-color-4, #dcdcdc));
+  border: 2rpx solid var(--td-component-border, var(--td-gray-color-4, #dddddd));
   background-color: var(--td-bg-color-container, var(--td-font-white-1, #ffffff));
   display: flex;
   align-items: center;
@@ -162,7 +162,7 @@
   color: var(--td-text-color-anti, var(--td-font-white-1, #ffffff));
 }
 .t-chat-sender__sendbtn--default .send-btn-icon.disabled {
-  background-color: var(--td-bg-color-secondarycomponent, var(--td-gray-color-4, #dcdcdc));
+  background-color: var(--td-bg-color-secondarycomponent, var(--td-gray-color-4, #dddddd));
   color: var(--td-bg-color-container, var(--td-font-white-1, #ffffff));
 }
 .t-chat-sender .btn-func {
@@ -172,7 +172,7 @@
   z-index: 2;
   background-color: var(--td-bg-color-container, var(--td-font-white-1, #ffffff));
   border-radius: 999rpx;
-  border: 2rpx solid var(--td-component-border, var(--td-gray-color-4, #dcdcdc));
+  border: 2rpx solid var(--td-component-border, var(--td-gray-color-4, #dddddd));
   display: flex;
   justify-content: center;
   align-items: center;

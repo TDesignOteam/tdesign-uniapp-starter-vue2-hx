@@ -5,7 +5,7 @@
   background-color: var(--td-bg-color-container, var(--td-font-white-1, #ffffff));
   padding: 24rpx;
   border-radius: 12rpx;
-  border: 1px solid var(--td-component-border, var(--td-gray-color-4, #dcdcdc));
+  border: 1px solid var(--td-component-border, var(--td-gray-color-4, #dddddd));
 }
 .t-qrcode.t-borderless {
   border-color: transparent;

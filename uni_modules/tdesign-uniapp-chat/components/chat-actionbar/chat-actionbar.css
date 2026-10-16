@@ -39,7 +39,7 @@
 }
 .t-chat-actionbar__inner {
   background-color: var(--td-bg-color-secondarycontainer, var(--td-gray-color-1, #f3f3f3));
-  border: 2rpx solid var(--td-component-border, var(--td-gray-color-4, #dcdcdc));
+  border: 2rpx solid var(--td-component-border, var(--td-gray-color-4, #dddddd));
   box-sizing: border-box;
   border-radius: var(--td-radius-default, 12rpx);
   display: inline-flex;
@@ -58,7 +58,7 @@
 .t-chat-actionbar__item {
   color: var(--td-text-color-primary, var(--td-font-gray-1, rgba(0, 0, 0, 0.9)));
   padding: var(--chat-actionbar-item-padding, 16rpx 28rpx);
-  border-right: 2rpx solid var(--td-component-stroke, var(--td-gray-color-3, #e7e7e7));
+  border-right: 2rpx solid var(--td-component-stroke, var(--td-gray-color-3, #e8e8e8));
   background-color: unset;
   outline: none;
 }

@@ -129,7 +129,7 @@
 }
 .t-chat-message--outline :deep(.t-chat-content) {
   padding: 24rpx 32rpx;
-  border: 1rpx solid var(--td-component-border, var(--td-gray-color-4, #dcdcdc));
+  border: 1rpx solid var(--td-component-border, var(--td-gray-color-4, #dddddd));
   border-radius: 0 var(--td-radius-extraLarge, 24rpx) var(--td-radius-extraLarge, 24rpx) var(--td-radius-extraLarge, 24rpx);
 }
 .t-chat-message--outline.assistant :deep(.t-chat-content) {

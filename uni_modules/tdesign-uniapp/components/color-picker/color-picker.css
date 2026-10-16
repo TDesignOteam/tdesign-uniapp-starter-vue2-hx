@@ -28,7 +28,7 @@
   border-radius: var(--td-radius-circle, 50%);
   box-sizing: border-box;
   display: block;
-  border: 1px solid var(--td-component-border, var(--td-gray-color-4, #dcdcdc));
+  border: 1px solid var(--td-component-border, var(--td-gray-color-4, #dddddd));
 }
 .t-color-picker__thumb::before {
   left: 0;
@@ -165,7 +165,7 @@
 .t-color-picker__format-item--first {
   flex-shrink: 0;
   width: 136rpx;
-  border: 2rpx solid var(--td-component-border, var(--td-gray-color-4, #dcdcdc));
+  border: 2rpx solid var(--td-component-border, var(--td-gray-color-4, #dddddd));
   border-radius: var(--td-radius-default, 12rpx);
   padding: 6rpx 0;
   margin-right: 24rpx;
@@ -183,7 +183,7 @@
   width: 0;
   margin-left: -2rpx;
   padding: 6rpx 0;
-  border: 1px solid var(--td-component-border, var(--td-gray-color-4, #dcdcdc));
+  border: 1px solid var(--td-component-border, var(--td-gray-color-4, #dddddd));
   border-radius: var(--td-radius-default, 12rpx);
 }
 .t-color-picker__format-input:not(:first-child):not(:last-child) {

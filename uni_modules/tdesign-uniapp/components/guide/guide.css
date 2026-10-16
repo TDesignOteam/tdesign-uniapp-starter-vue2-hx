@@ -13,7 +13,7 @@
 }
 .t-guide__container--popover {
   background-color: var(--td-guide-popover-bg-color, var(--td-bg-color-container, var(--td-font-white-1, #ffffff)));
-  border: var(--td-guide-popover-border, 2rpx solid var(--td-component-border, var(--td-gray-color-4, #dcdcdc)));
+  border: var(--td-guide-popover-border, 2rpx solid var(--td-component-border, var(--td-gray-color-4, #dddddd)));
   border-radius: var(--td-guide-popover-border-radius, var(--td-radius-large, 18rpx));
   box-shadow: var(--td-guide-popover-shadow, var(--td-shadow-3, 0 6px 30px 5px rgba(0, 0, 0, 0.05), 0 16px 24px 2px rgba(0, 0, 0, 0.04), 0 8px 10px -5px rgba(0, 0, 0, 0.08)));
   padding: var(--td-guide-popover-padding, var(--td-spacer-2, 32rpx));

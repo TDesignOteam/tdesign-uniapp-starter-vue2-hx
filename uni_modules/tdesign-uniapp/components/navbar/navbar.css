@@ -62,7 +62,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 0;
+  right: var(--td-navbar-right, 95px);
   display: flex;
   align-items: center;
   margin-right: var(--td-spacer-1, 24rpx);
@@ -86,7 +86,7 @@
   transform-origin: 0 0;
   box-sizing: border-box;
   border-radius: calc(var(--td-navbar-capsule-border-radius, 16px) * 2);
-  border: 2rpx solid var(--td-navbar-capsule-border-color, var(--td-border-level-1-color, var(--td-gray-color-3, #e7e7e7)));
+  border: 2rpx solid var(--td-navbar-capsule-border-color, var(--td-border-level-1-color, var(--td-gray-color-3, #e8e8e8)));
 }
 .t-navbar__capsule:empty {
   display: none;

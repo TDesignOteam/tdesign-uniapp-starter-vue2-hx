@@ -36,12 +36,12 @@
 }
 .t-button--default {
   color: var(--td-button-default-color, var(--td-text-color-primary, var(--td-font-gray-1, rgba(0, 0, 0, 0.9))));
-  background-color: var(--td-button-default-bg-color, var(--td-bg-color-component, var(--td-gray-color-3, #e7e7e7)));
-  border-color: var(--td-button-default-border-color, var(--td-bg-color-component, var(--td-gray-color-3, #e7e7e7)));
+  background-color: var(--td-button-default-bg-color, var(--td-bg-color-component, var(--td-gray-color-3, #e8e8e8)));
+  border-color: var(--td-button-default-border-color, var(--td-bg-color-component, var(--td-gray-color-3, #e8e8e8)));
 }
 .t-button--default::after {
   border-width: var(--td-button-border-width, 4rpx);
-  border-color: var(--td-button-default-border-color, var(--td-bg-color-component, var(--td-gray-color-3, #e7e7e7)));
+  border-color: var(--td-button-default-border-color, var(--td-bg-color-component, var(--td-gray-color-3, #e8e8e8)));
 }
 .t-button--default.t-button--hover {
   z-index: 0;
@@ -168,7 +168,7 @@
 }
 .t-button--text.t-button--hover,
 .t-button--text.t-button--hover::after {
-  background-color: var(--td-button-default-text-active-bg-color, var(--td-bg-color-container-active, var(--td-gray-color-3, #e7e7e7)));
+  background-color: var(--td-button-default-text-active-bg-color, var(--td-bg-color-container-active, var(--td-gray-color-3, #e8e8e8)));
 }
 .t-button--text.t-button--primary {
   color: var(--td-button-primary-text-color, var(--td-brand-color, var(--td-primary-color-7, #0052d9)));
@@ -176,7 +176,7 @@
 }
 .t-button--text.t-button--primary.t-button--hover,
 .t-button--text.t-button--primary.t-button--hover::after {
-  background-color: var(--td-button-primary-text-active-bg-color, var(--td-bg-color-container-active, var(--td-gray-color-3, #e7e7e7)));
+  background-color: var(--td-button-primary-text-active-bg-color, var(--td-bg-color-container-active, var(--td-gray-color-3, #e8e8e8)));
 }
 .t-button--text.t-button--primary.t-button--disabled {
   color: var(--td-button-primary-text-disabled-color, var(--td-brand-color-disabled, var(--td-primary-color-3, #b5c7ff)));
@@ -188,7 +188,7 @@
 }
 .t-button--text.t-button--danger.t-button--hover,
 .t-button--text.t-button--danger.t-button--hover::after {
-  background-color: var(--td-button-danger-text-active-bg-color, var(--td-bg-color-container-active, var(--td-gray-color-3, #e7e7e7)));
+  background-color: var(--td-button-danger-text-active-bg-color, var(--td-bg-color-container-active, var(--td-gray-color-3, #e8e8e8)));
 }
 .t-button--text.t-button--danger.t-button--disabled {
   color: var(--td-button-danger-text-disabled-color, var(--td-button-danger-disabled-color, var(--td-font-white-1, #ffffff)));
@@ -200,7 +200,7 @@
 }
 .t-button--text.t-button--light.t-button--hover,
 .t-button--text.t-button--light.t-button--hover::after {
-  background-color: var(--td-button-light-text-active-bg-color, var(--td-bg-color-container-active, var(--td-gray-color-3, #e7e7e7)));
+  background-color: var(--td-button-light-text-active-bg-color, var(--td-bg-color-container-active, var(--td-gray-color-3, #e8e8e8)));
 }
 .t-button--text.t-button--disabled {
   color: var(--td-button-default-disabled-color, var(--td-text-color-disabled, var(--td-font-gray-4, rgba(0, 0, 0, 0.26))));
@@ -211,19 +211,19 @@
 }
 .t-button--outline,
 .t-button--outline::after {
-  border-color: var(--td-button-default-outline-border-color, var(--td-component-border, var(--td-gray-color-4, #dcdcdc)));
+  border-color: var(--td-button-default-outline-border-color, var(--td-component-border, var(--td-gray-color-4, #dddddd)));
 }
 .t-button--outline.t-button--hover,
 .t-button--outline.t-button--hover::after {
-  background-color: var(--td-button-default-outline-active-bg-color, var(--td-bg-color-container-active, var(--td-gray-color-3, #e7e7e7)));
-  border-color: var(--td-button-default-outline-active-border-color, var(--td-component-border, var(--td-gray-color-4, #dcdcdc)));
+  background-color: var(--td-button-default-outline-active-bg-color, var(--td-bg-color-container-active, var(--td-gray-color-3, #e8e8e8)));
+  border-color: var(--td-button-default-outline-active-border-color, var(--td-component-border, var(--td-gray-color-4, #dddddd)));
 }
 .t-button--outline.t-button--disabled {
-  color: var(--td-button-default-outline-disabled-color, var(--td-component-border, var(--td-gray-color-4, #dcdcdc)));
+  color: var(--td-button-default-outline-disabled-color, var(--td-component-border, var(--td-gray-color-4, #dddddd)));
 }
 .t-button--outline.t-button--disabled,
 .t-button--outline.t-button--disabled::after {
-  border-color: var(--td-button-default-outline-disabled-color, var(--td-component-border, var(--td-gray-color-4, #dcdcdc)));
+  border-color: var(--td-button-default-outline-disabled-color, var(--td-component-border, var(--td-gray-color-4, #dddddd)));
 }
 .t-button--outline.t-button--primary {
   color: var(--td-button-primary-outline-color, var(--td-brand-color, var(--td-primary-color-7, #0052d9)));
@@ -236,7 +236,7 @@
   color: var(--td-button-primary-outline-active-border-color, var(--td-brand-color-active, var(--td-primary-color-8, #003cab)));
 }
 .t-button--outline.t-button--primary.t-button--hover::after {
-  background-color: var(--td-button-primary-outline-active-bg-color, var(--td-bg-color-container-active, var(--td-gray-color-3, #e7e7e7)));
+  background-color: var(--td-button-primary-outline-active-bg-color, var(--td-bg-color-container-active, var(--td-gray-color-3, #e8e8e8)));
   border-color: var(--td-button-primary-outline-active-border-color, var(--td-brand-color-active, var(--td-primary-color-8, #003cab)));
 }
 .t-button--outline.t-button--primary.t-button--disabled {
@@ -258,7 +258,7 @@
   color: var(--td-button-danger-outline-active-border-color, var(--td-error-color-active, var(--td-error-color-7, #ad352f)));
 }
 .t-button--outline.t-button--danger.t-button--hover::after {
-  background-color: var(--td-button-danger-outline-active-bg-color, var(--td-bg-color-container-active, var(--td-gray-color-3, #e7e7e7)));
+  background-color: var(--td-button-danger-outline-active-bg-color, var(--td-bg-color-container-active, var(--td-gray-color-3, #e8e8e8)));
   border-color: var(--td-button-danger-outline-active-border-color, var(--td-error-color-active, var(--td-error-color-7, #ad352f)));
 }
 .t-button--outline.t-button--danger.t-button--disabled {
@@ -303,8 +303,8 @@
 }
 .t-button--dashed.t-button--hover,
 .t-button--dashed.t-button--hover::after {
-  background-color: var(--td-button-default-outline-active-bg-color, var(--td-bg-color-container-active, var(--td-gray-color-3, #e7e7e7)));
-  border-color: var(--td-button-default-outline-active-border-color, var(--td-component-border, var(--td-gray-color-4, #dcdcdc)));
+  background-color: var(--td-button-default-outline-active-bg-color, var(--td-bg-color-container-active, var(--td-gray-color-3, #e8e8e8)));
+  border-color: var(--td-button-default-outline-active-border-color, var(--td-component-border, var(--td-gray-color-4, #dddddd)));
 }
 .t-button--dashed.t-button--primary {
   color: var(--td-button-primary-dashed-color, var(--td-brand-color, var(--td-primary-color-7, #0052d9)));

@@ -39,7 +39,7 @@
 }
 .t-typography--code {
   border-radius: var(--td-radius-default, 12rpx);
-  border: 1px solid var(--td-component-border, var(--td-gray-color-4, #dcdcdc));
+  border: 1px solid var(--td-component-border, var(--td-gray-color-4, #dddddd));
   margin: 0 var(--td-spacer, 16rpx);
   background-color: var(--td-bg-color-secondarycontainer, var(--td-gray-color-1, #f3f3f3));
   padding: 0 var(--td-spacer, 16rpx);
@@ -51,11 +51,11 @@
 }
 .t-typography--keyboard {
   border-radius: var(--td-radius-default, 12rpx);
-  border: 1px solid var(--td-component-border, var(--td-gray-color-4, #dcdcdc));
+  border: 1px solid var(--td-component-border, var(--td-gray-color-4, #dddddd));
   margin: 0 calc(var(--td-spacer, 16rpx) / 2);
   background-color: var(--td-bg-color-secondarycontainer, var(--td-gray-color-1, #f3f3f3));
   padding: 0 var(--td-spacer, 16rpx);
-  box-shadow: 0 1px 0 0 var(--td-component-border, var(--td-gray-color-4, #dcdcdc));
+  box-shadow: 0 1px 0 0 var(--td-component-border, var(--td-gray-color-4, #dddddd));
   font: var(--td-font-body-small, 24rpx / 40rpx var(--td-font-family, PingFang SC, Microsoft YaHei, Arial Regular));
   font-family: Source Code Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei;
   display: inline-block;

@@ -31,7 +31,7 @@
   bottom: unset;
   left: unset;
   right: unset;
-  background-color: var(--td-collapse-border-color, var(--td-border-level-1-color, var(--td-gray-color-3, #e7e7e7)));
+  background-color: var(--td-collapse-border-color, var(--td-border-level-1-color, var(--td-gray-color-3, #e8e8e8)));
 }
 .t-collapse-panel__header--top::after {
   height: 1px;
@@ -50,7 +50,7 @@
   bottom: 0;
   left: unset;
   right: unset;
-  background-color: var(--td-collapse-border-color, var(--td-border-level-1-color, var(--td-gray-color-3, #e7e7e7)));
+  background-color: var(--td-collapse-border-color, var(--td-border-level-1-color, var(--td-gray-color-3, #e8e8e8)));
 }
 .t-collapse-panel__header--bottom::after {
   height: 1px;
@@ -75,7 +75,7 @@
   bottom: 0;
   left: unset;
   right: unset;
-  background-color: var(--td-collapse-border-color, var(--td-border-level-1-color, var(--td-gray-color-3, #e7e7e7)));
+  background-color: var(--td-collapse-border-color, var(--td-border-level-1-color, var(--td-gray-color-3, #e8e8e8)));
 }
 .t-collapse-panel__body::after {
   height: 1px;
@@ -106,7 +106,7 @@
   bottom: 0;
   left: unset;
   right: unset;
-  background-color: var(--td-collapse-border-color, var(--td-border-level-1-color, var(--td-gray-color-3, #e7e7e7)));
+  background-color: var(--td-collapse-border-color, var(--td-border-level-1-color, var(--td-gray-color-3, #e8e8e8)));
 }
 .t-collapse-panel__content--expanded.t-collapse-panel__content--bottom::after {
   height: 1px;
@@ -125,7 +125,7 @@
   bottom: unset;
   left: unset;
   right: unset;
-  background-color: var(--td-collapse-border-color, var(--td-border-level-1-color, var(--td-gray-color-3, #e7e7e7)));
+  background-color: var(--td-collapse-border-color, var(--td-border-level-1-color, var(--td-gray-color-3, #e8e8e8)));
 }
 .t-collapse-panel__content--expanded.t-collapse-panel__content--top::after {
   height: 1px;

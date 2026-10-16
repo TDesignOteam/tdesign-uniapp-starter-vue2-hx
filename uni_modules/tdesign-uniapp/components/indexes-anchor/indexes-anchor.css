@@ -19,7 +19,7 @@
   bottom: 0;
   left: unset;
   right: unset;
-  background-color: var(--td-indexes-anchor-border-color, var(--td-component-border, var(--td-gray-color-4, #dcdcdc)));
+  background-color: var(--td-indexes-anchor-border-color, var(--td-component-border, var(--td-gray-color-4, #dddddd)));
 }
 .t-indexes-anchor__header--active::after {
   height: 1px;

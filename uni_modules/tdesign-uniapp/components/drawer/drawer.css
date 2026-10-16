@@ -34,7 +34,7 @@
   bottom: 0;
   left: unset;
   right: unset;
-  background-color: var(--td-drawer-border-color, var(--td-border-level-1-color, var(--td-gray-color-3, #e7e7e7)));
+  background-color: var(--td-drawer-border-color, var(--td-border-level-1-color, var(--td-gray-color-3, #e8e8e8)));
 }
 .t-drawer__sidebar-item::after {
   height: 1px;

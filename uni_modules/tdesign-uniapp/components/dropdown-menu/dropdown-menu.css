@@ -12,7 +12,7 @@
   bottom: 0;
   left: unset;
   right: unset;
-  background-color: var(--td-component-border, var(--td-gray-color-4, #dcdcdc));
+  background-color: var(--td-component-border, var(--td-gray-color-4, #dddddd));
 }
 .t-dropdown-menu::after {
   height: 1px;
